@@ -3,7 +3,7 @@ node {
 
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
-
+        app = dockerfile
         checkout scm
     }
 
@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("MichalCzerniawko/Coursework2")
+        app = docker.build("czerniawkomichal/cw2")
     }
 
     stage('Test image') {
