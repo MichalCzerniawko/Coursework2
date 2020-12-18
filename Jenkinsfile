@@ -34,16 +34,6 @@ node {
             app.push("latest")
       }
    }
- stage('Checkout (GitHub)') {
-
-      steps{
-
-       checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [url: 'github.com//MichalCzerniawko/Coursework2']]])  
-
-      }
-
-    }
-   
 
         stage('Sonarqube') {
 
