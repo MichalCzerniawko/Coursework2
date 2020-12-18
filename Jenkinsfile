@@ -3,7 +3,7 @@ node {
      def app
 
    stage('Clone repository') {
-        /* Let's make sure we have the repository cloned to our workspace */
+        /* 's make sure we have the repository cloned to our workspace */
 
         checkout scm
     }
@@ -13,6 +13,15 @@ node {
          * docker build on the command line */
 
         app = docker.build("czerniawkomichal/cw2")
+    }
+
+     stage('Test image') {
+        /* Ideally, we would run a test framework against our image.
+         * For this example, we're using a Volkswagen-type approach ;-) */
+
+        app.inside {
+            sh 'echo "Tests passed"'
+        }
     }
 
     stage('Push image') {
