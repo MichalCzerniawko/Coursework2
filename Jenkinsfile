@@ -41,11 +41,11 @@ node {
         scannerHome = tool 'Sonarqube'
     }
 
-        steps {
+         
 
                 withSonarQubeEnv('SonarQube') {
             sh "${scannerHome}/bin/sonar-scanner"
         }
-    }
+    
 }
 }
