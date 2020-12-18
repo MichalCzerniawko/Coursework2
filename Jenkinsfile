@@ -38,7 +38,7 @@ node {
 
       steps{
 
-       checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '26370a2f-54ed-4214-9bf1-81f14f864246', url: 'github.com//MichalCzerniawko/Coursework2']]])  
+       checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [url: 'github.com//MichalCzerniawko/Coursework2']]])  
 
       }
 
