@@ -43,7 +43,7 @@ node {
 
          
 
-                withSonarQubeEnv('SonarQube') {
+                withSonarQubeEnv('Sonarqube') {
             sh "${scannerHome}/bin/sonar-scanner"
         }
     
